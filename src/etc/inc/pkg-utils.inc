@@ -80,6 +80,7 @@ function pkg_env($extra_env = array()) {
 	$pkg_env_vars = array(
 		"LANG" => "C",
 		"HTTP_USER_AGENT" => $user_agent,
+		"SSL_CA_CERT_PATH" => "{$g['etc_path']}/ssl/certs",
 		"ASSUME_ALWAYS_YES" => "true",
 		"FETCH_TIMEOUT" => 5,
 		"FETCH_RETRY" => 2

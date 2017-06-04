@@ -1499,6 +1499,9 @@ EOD;
 			fastcgi_param  SCRIPT_FILENAME  \$document_root\$fastcgi_script_name;
 			# Fix httpoxy - https://httpoxy.org/#fix-now
 			fastcgi_param  HTTP_PROXY  "";
+			# Allow additional trusted CAs
+			fastcgi_param  SSL_CA_CERT_PATH  "/etc/ssl/certs";
+			fastcgi_param  SSL_CERT_DIR  "/etc/ssl/certs";
 			fastcgi_read_timeout 180;
 			include        /usr/local/etc/nginx/fastcgi_params;
 		}
